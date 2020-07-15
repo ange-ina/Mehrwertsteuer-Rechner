@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>MW_Steuer_Rechner</title>
+</head>
+<body>
+    <section>
+        <article>
+
+
+            <h1>Mehrwertsteuer-Rechner</h1>
+            <form action="" id="form1">
+
+
+                <div>
+                    <label for="">Was soll berechnet werden?</label>
+                    <input type="radio" name="NorB" id="NzuB" value="NzuB" onclick="funcNorB(0)" checked>
+                    <label for="NzuB">Mehrwertsteuer aufschlagen (Netto zu Brutto)</label>
+
+                    <br>
+                    <input type="radio" name="NorB" id="BzuN" value="BzuN" onclick="funcNorB(1)">
+                    <label for="BzuN">Mehrwertsteuer abziehen(Brutto zu Netto) </label>
+                    <br>
+                </div>
+
+
+
+
+                <div class="steuer">
+                    <label for="">Mehrwertsteuersatz</label>
+                    <input type="radio" name="MWSteuer" id="S19" value="1.19" checked>
+                    <label for="S19">19%</label>
+                    <input type="radio" name="MWSteuer" id="S7" value="1.07">
+                    <label for="S7">7%</label>
+                </div>
+
+
+                <div>
+                    <h2 id="nettoOrBrutto">Nettobetrag(Preis ohne Mehrwertsteuer) in Euro <span>*</span></h2>
+                    <input type="number" name="" id="inputNum">
+                    <input type="button" value="BERECHNEN" onclick="berechnen()">
+
+
+                </div>
+
+
+                <h3>Ergebniss</h3>
+                <div id="result">
+                    <div id="result1">
+                        <h3>Mehrwertsteuerbetrag:</h3>
+                        <p id="resultM">- €</p>
+                    </div>
+                    <div id="result2">
+                        <h3 id="resultNorB">Bruttobetrag (Endpreis):</h3>
+                        <p id="resultBetrag">-€</p>
+                    </div>
+                </div>
+
+
+
+
+            </form>
+        </article>
+    </section>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
